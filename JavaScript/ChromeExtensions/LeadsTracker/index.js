@@ -43,7 +43,7 @@ function saveToLocalStorage(leads){
 function render(leads){
     let listItems = ""
     for(let i = 0; i < leads.length; i++){
-        listItems += `<li>${leads[i]}</li>`
+        listItems += `<li><a href= '${leads[i]}' target='_blank'>${leads[i]}</a></li>`
     }   
     console.log(listItems)
     ulEl.innerHTML = listItems
