@@ -3,8 +3,10 @@ package javaPractice;
 public class StringReversal {
 	public static void main(String args[]) {
 		String inputString = "Apples are red.";
-		reverseString(inputString);
-		resverseStringWords(inputString);
+//		reverseString(inputString);
+//		resverseStringWords(inputString);
+		reverseString1(inputString);
+		reverseEachWord(inputString);
 	}
 	
 	
@@ -23,6 +25,24 @@ public class StringReversal {
 		StringBuilder outputString = new StringBuilder();
 		for(int i=stringArray.length-1; i>=0; i--) {
 			outputString.append(stringArray[i]+" ");
+		}
+		System.out.println(outputString);
+	}
+	
+	
+	public static void reverseString1(String input) {
+		StringBuilder outputString = new StringBuilder();
+		for(int i=input.length()-1; i>=0; i--) {
+			outputString.append(input.charAt(i));
+		}
+		System.out.println(outputString);
+	}
+	
+	public static void reverseEachWord(String input) {
+		StringBuilder outputString = new StringBuilder();
+		String[] inputArray = input.split(" ");
+		for(int i=inputArray.length-1; i>=0; i--) {
+			outputString.append(inputArray[i]+" ");
 		}
 		System.out.println(outputString);
 	}
